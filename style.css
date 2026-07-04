@@ -1,0 +1,603 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Google Sans Flex", sans-serif;
+    background-color: #ffffff; 
+    color: #01184C; 
+}
+
+header {
+    background-color: #01184C; 
+    padding: 15px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    box-shadow: 0 4px 12px rgba(1, 24, 76, 0.15);
+}
+
+#logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.img {
+    height: 50px;
+    width: auto;
+}
+
+#titulo {
+    height: 90px;
+    width: auto;
+}
+
+.campo {
+    flex-grow: 1;
+    max-width: 500px;
+    background-color: #ffffff;
+    border: 2px solid #29A5D7; 
+    border-radius: 25px;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #01184C;
+    transition: all 0.3s ease;
+}
+
+.campo:hover {
+    border-color: #930260; 
+    box-shadow: 0 0 8px rgba(147, 2, 96, 0.2);
+}
+
+.campo p {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.header-menu {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+   
+}
+
+.botao {
+    background-color: #460E5A; 
+    color: #ffffff;
+    border: 2px solid transparent;
+    border-radius: 20px;
+    padding: 8px 18px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.botao:hover {
+    background-color: #930260; 
+    border-color: #29A5D7; 
+    transform: translateY(-1px);
+}
+
+.icone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    transition: transform 0.2s ease;
+}
+
+.icone img {
+    width: 100%;
+    height: auto;
+    filter: invert(1); 
+}
+
+.icone:hover {
+    transform: scale(1.1);
+}
+
+#promo {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    padding: 40px 5%;
+}
+
+.banner {
+     background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+        url("imagens/fundodisco.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 350px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 15px rgba(70, 14, 90, 0.25);
+    
+}
+
+.banner a {
+    color: #ffffff;
+    font-size: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    text-shadow: 0 2px 4px rgba(128, 0, 255, 0.768);
+    
+}
+
+.bot {
+    border: 2px solid #29A5D7; 
+    border-radius: 15px;
+    padding: 20px;
+    color: #ffffff;
+    text-align: center;
+    font-weight: 600;
+    font-size: 2em;
+    background-image: url("imagens/fundodisco.png");
+}
+
+.bot button{
+    margin-top: 90px;
+}
+
+#produto, #grade {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 30px;
+    padding: 40px 5%;
+}
+
+.p {
+    background-color: #ffffff;
+    border: 1px solid rgba(1, 24, 76, 0.1);
+    height: 250px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(1, 24, 76, 0.03);
+}
+
+.produto {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid rgba(1, 24, 76, 0.05);
+    box-shadow: 0 4px 12px rgba(1, 24, 76, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.produto:hover {
+    transform: translateY(-5px);
+    border-color: #29A5D7; 
+    box-shadow: 0 8px 20px rgba(41, 165, 215, 0.15);
+}
+
+.produto img {
+    width: 100%;
+    max-width: 180px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 6px;
+    box-shadow: 0 6px 12px rgba(1, 24, 76, 0.15);
+}
+
+#info {
+    padding: 30px 5%;
+    background-color: #460E5A; 
+    color: #ffffff;
+    text-align: center;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+#categorias {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); 
+    gap: 20px;
+    padding: 40px 5%;
+}
+
+.card-categoria {
+    height: 140px; 
+    border-radius: 12px;
+    display: flex;
+    align-items: flex-end; 
+    padding: 20px;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(1, 24, 76, 0.1);
+}
+
+.card-categoria::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+        url("imagens/fundodisco.png"); 
+    z-index: 1;
+    transition: opacity 0.3s ease;
+}
+
+.card-categoria span {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 700;
+    position: relative;
+    z-index: 2; 
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+
+.card-categoria:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(41, 165, 215, 0.3); 
+}
+
+.card-categoria:hover::before {
+    background: linear-gradient(to top, #930260 10%, rgba(70, 14, 90, 0.4) 100%); 
+}
+
+main.container-detalhes {
+    display: flex !important;
+    flex-direction: row !important;
+    width: 100% !important;
+    min-height: calc(100vh - 100px);
+    background-color: #ffffff !important;
+}
+
+
+.info-produto {
+    width: 50% !important;
+    padding: 60px 5% 60px 8% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+}
+
+.nome-album {
+    font-size: 42px !important;
+    font-weight: 800 !important;
+    color: #01184C !important;
+    line-height: 1.1 !important;
+    text-transform: uppercase !important;
+    margin-bottom: 5px !important;
+}
+
+.artista-album {
+    font-size: 20px !important;
+    color: #29A5D7 !important;
+    font-weight: 600 !important;
+    margin-bottom: 20px !important;
+}
+
+.preco-album {
+    font-size: 32px !important;
+    font-weight: 700 !important;
+    color: #460E5A !important;
+    margin-bottom: 30px !important;
+}
+
+.descricao-album {
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+    color: #555 !important;
+    margin-bottom: 40px !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+}
+
+
+.seletor-opcao {
+    margin-bottom: 30px !important;
+}
+
+.seletor-opcao label {
+    display: block !important;
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    color: #01184C !important;
+    margin-bottom: 10px !important;
+}
+
+.seletor-opcao select {
+    width: 100% !important;
+    max-width: 350px !important;
+    padding: 12px 15px !important;
+    border: 1.5px solid #01184C !important;
+    border-radius: 4px !important;
+    color: #01184C !important;
+    background-color: #fff !important;
+}
+
+
+.acoes-compra {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 15px !important;
+    margin-top: 10px !important;
+    width: 100% !important;
+}
+
+.contador-quantidade {
+    display: flex !important;
+    align-items: center !important;
+    border: 1.5px solid #01184C !important;
+    border-radius: 4px !important;
+    height: 48px !important;
+    background-color: #fff !important;
+}
+
+.contador-quantidade input {
+    width: 70px !important;
+    height: 100% !important;
+    border: none !important;
+    text-align: center !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    color: #01184C !important;
+    outline: none !important;
+}
+
+
+.btn-adicionar {
+    width: 100% !important;
+    max-width: 300px !important;
+    height: 48px !important;
+    background-color: transparent !important;
+    color: #01184C !important;
+    border: 1.5px solid #01184C !important;
+    border-radius: 24px !important;
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    letter-spacing: 1px !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+}
+
+.btn-adicionar:hover {
+    background-color: #930260 !important;
+    color: #ffffff !important;
+    border-color: #930260 !important;
+}
+
+
+.imagem-produto {
+    width: 50% !important;
+    background-color: #f4f4f4 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 40px !important;
+}
+
+.wrapper-imagem {
+    width: 80% !important;
+    max-width: 450px !important;
+    aspect-ratio: 1 / 1 !important;
+}
+
+.wrapper-imagem img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15) !important;
+}
+
+
+
+
+.container-carrinho {
+    display: flex;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    gap: 40px;
+    min-height: 60vh;
+}
+
+
+.lista-itens-carrinho {
+    flex: 2;
+}
+
+.titulo-carrinho {
+    font-size: 28px;
+    color: #01184C; 
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+.item-carrinho {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(1, 24, 76, 0.1);
+    gap: 20px;
+}
+
+.foto-item {
+    width: 90px;
+    height: 90px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.foto-item img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+}
+
+.detalhes-item {
+    flex: 1;
+}
+
+.detalhes-item h2 {
+    font-size: 18px;
+    color: #01184C;
+    margin-bottom: 4px;
+}
+
+.detalhes-item p {
+    font-size: 14px;
+    color: #29A5D7; 
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.variacao-item {
+    font-size: 12px;
+    color: #777;
+}
+
+.qtd-item input {
+    width: 60px;
+    padding: 8px;
+    border: 1.5px solid #01184C;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    color: #01184C;
+    outline: none;
+}
+
+.preco-item {
+    font-size: 18px;
+    font-weight: 700;
+    color: #460E5A; 
+    min-width: 100px;
+    text-align: right;
+}
+
+.link-continuar {
+    display: inline-block;
+    margin-top: 30px;
+    color: #29A5D7;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.link-continuar:hover {
+    text-decoration: underline;
+}
+
+
+.resumo-carrinho {
+    flex: 1;
+    background-color: #ffffff;
+    border: 1px solid rgba(1, 24, 76, 0.08);
+    border-radius: 12px;
+    padding: 30px;
+    height: fit-content;
+    box-shadow: 0 6px 15px rgba(1, 24, 76, 0.03);
+}
+
+.resumo-carrinho h2 {
+    font-size: 20px;
+    color: #01184C;
+    margin-bottom: 24px;
+    font-weight: 700;
+}
+
+.linha-resumo {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    font-size: 15px;
+    color: #555;
+}
+
+.frete-gratis {
+    color: #29A5D7;
+    font-weight: 600;
+}
+
+.total-pedido {
+    border-top: 1px dashed rgba(1, 24, 76, 0.15);
+    padding-top: 16px;
+    margin-top: 16px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #01184C;
+}
+
+.btn-finalizar {
+    width: 100%;
+    height: 48px;
+    background-color: #930260; 
+    color: white;
+    border: none;
+    border-radius: 24px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    margin-top: 24px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(147, 2, 96, 0.2);
+}
+
+.btn-finalizar:hover {
+    background-color: #460E5A; 
+    box-shadow: 0 6px 15px rgba(70, 14, 90, 0.25);
+    transform: translateY(-1px);
+}
+
+
+footer{
+
+    margin-top:70px;
+
+    background:#1A1026;
+
+    padding:40px;
+
+}
+
+#rodape{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+}
+
+#rodape p{
+
+    margin-top:18px;
+
+    color:#B9B9B9;
+
+}
+
+#rodape img{
+    height: 100px;
+    width: auto;
+}

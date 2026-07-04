@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akira Discos | Taylor Swift - Debut</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <a class="icone" href="produtos.html"><img src="imagens/seta.svg" alt="Voltar"></a>
+        <div class="header-menu">
+            <button class="botao">Pop</button><button class="botao">Hip-Hop</button><button class="botao">Folk</button><button class="botao">Rap</button><button class="botao">MPB</button><button class="botao">Rock</button><button class="botao">Sertanejo</button>
+        </div>
+        <a class="icone" href="carrinho.html"><img src="imagens/carrinho.svg" alt="Carrinho"></a>
+    </header>
+    <main class="container-detalhes">
+        <section class="info-produto">
+            <h1 class="nome-album">Taylor Swift (Debut)</h1>
+            <p class="artista-album">Taylor Swift</p>
+            <div class="preco-album">R$ 239,00</div>
+            <div class="descricao-album">
+                <p>Disco de vinil simples, edição comemorativa em vinil verde translúcido. Contém encarte de 12 páginas com fotos raras da época country e as letras completas de todas as faixas originais.</p>
+            </div>
+            <div class="seletor-opcao">
+                <label for="edicao">Escolha a Edição:</label>
+                <select id="edicao">
+                    <option value="padrao">Vinil Verde Translúcido</option>
+                </select>
+            </div>
+            <div class="acoes-compra">
+                <div class="contador-quantidade"><input type="number" id="quantidade" value="1" min="1" max="10"></div>
+                <button class="btn-adicionar">ADICIONAR AO CARRINHO</button>
+            </div>
+        </section>
+        <section class="imagem-produto">
+            <div class="wrapper-imagem"><img src="imagens/albuns/ts 1.svg" alt="Taylor Swift - Debut"></div>
+        </section>
+    </main>
+    <footer><div id="rodape"><img src="imagens/AkiraTitulo.svg" alt="Akira"><p>A música merece mais do que streaming.</p></div></footer>
+</body>
+</html>

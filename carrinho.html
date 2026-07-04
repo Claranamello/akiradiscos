@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akira Discos | Meu Carrinho</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <a class="icone" href="produtos.html">
+            <img src="imagens/seta.svg" alt="Voltar">
+        </a>
+        <div class="header-menu">
+            <button class="botao">Pop</button>
+            <button class="botao">Hip-Hop</button>
+            <button class="botao">Folk</button>
+            <button class="botao">Rap</button>
+            <button class="botao">MPB</button>
+            <button class="botao">Rock</button>
+            <button class="botao">Sertanejo</button>
+        </div>
+        <a class="icone" href="carrinho.html">
+            <img src="imagens/carrinho.svg" alt="Carrinho">
+        </a>
+    </header>
+-
+    <main class="container-carrinho">
+        
+-
+        <section class="lista-itens-carrinho">
+            <h1 class="titulo-carrinho">Seu Carrinho</h1>
+-
+            <div class="item-carrinho">
+                <div class="foto-item">
+                    <img src="imagens/albuns/ts 5.svg" alt="Disco 1">
+                </div>
+                <div class="detalhes-item">
+                    <h2>1989 (Taylor's Version)</h2>
+                    <p>Taylor Swift</p>
+                    <span class="variacao-item">Edição: Vinil Azul Padrão</span>
+                </div>
+                <div class="qtd-item">
+                    <input type="number" value="1" min="1" max="10">
+                </div>
+                <div class="preco-item">
+                    R$ 289,00
+                </div>
+            </div>
+-
+            <div class="item-carrinho">
+                <div class="foto-item">
+                    <img src="imagens/albuns/acdc.svg" alt="Disco 2">
+                </div>
+                <div class="detalhes-item">
+                    <h2>Back in Black</h2>
+                    <p>AC/DC</p>
+                    <span class="variacao-item">Edição: Vinil Preto 180g</span>
+                </div>
+                <div class="qtd-item">
+                    <input type="number" value="1" min="1" max="10">
+                </div>
+                <div class="preco-item">
+                    R$ 199,00
+                </div>
+            </div>
+
+            <a href="produtos.html" class="link-continuar">← Continuar Comprando</a>
+        </section>
+
+-
+        <section class="resumo-carrinho">
+            <h2>Resumo do Pedido</h2>
+            
+            <div class="linha-resumo">
+                <span>Subtotal</span>
+                <span>R$ 488,00</span>
+            </div>
+            
+            <div class="linha-resumo">
+                <span>Frete</span>
+                <span class="frete-gratis">Grátis</span>
+            </div>
+
+            <div class="linha-resumo total-pedido">
+                <span>Total</span>
+                <span>R$ 488,00</span>
+            </div>
+
+            <button class="btn-finalizar">FINALIZAR COMPRA</button>
+        </section>
+
+    </main>
+
+
+    <footer>
+        <div id="rodape">
+            <img src="imagens/AkiraTitulo.svg" alt="Akira">
+            <p>A música merece mais do que streaming.</p>
+        </div>
+    </footer>
+</body>
+</html>
